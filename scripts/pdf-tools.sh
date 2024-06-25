@@ -91,7 +91,7 @@ function pdf_tools_dependencies ()
 
 function pdf_tools_configure ()
 {
-    cd $pdf_tools_build_dir && "$pdf_tools_server_dir/configure" "--prefix=$pdf_tools_install_dir"
+    cd $pdf_tools_build_dir && CFLAGS="-D_GNU_SOURCE" "$pdf_tools_server_dir/configure" "--prefix=$pdf_tools_install_dir"
 }
 
 function pdf_tools_build ()
